@@ -17,11 +17,8 @@ class ConnectFour
     Array.new(7) { Array.new(6) { OPEN_SPACE } }
   end
 
-  def menu
-    introduction
-  end
-
   def play
+    introduction
     loop do
       draw_board(@board)
       player_input
@@ -124,6 +121,7 @@ class ConnectFour
     quit if input[0].match?(/[nN]/)
 
     @board = init_board
+    system "clear"
     play
   end
 
