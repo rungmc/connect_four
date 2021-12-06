@@ -60,14 +60,29 @@ class ConnectFour
 
   def won?
     # Vert win || Horiz win || Diag win
-    return true if match_four?(@board) || match_four?(@board.transpose) || match_four?(build_diag)
+    return true if match_four?(@board) || match_four?(@board.transpose) || match_four?(diags)
 
     false
   end
 
-  def build_diag
-    arr = []
-    arr
+  # Flips whole board to keep operations simple/consistent for each diagonal direction.
+  def diags
+    build_diag(0, 3, @board) + build_diag(0, 3, @board.reverse) +
+      build_diag(1, 2, @board.transpose) + build_diag(1, 2, @board.reverse.transpose)
+  end
+
+  def build_diag(start, stop, arr)
+    diag_arr = []
+    for i in start..stop
+      count = 0
+      line = []
+      while count.between?(0, arr[0].size - 1) && (i + count).between?(0, arr.size - 1)
+        line << arr[i + count][count]
+        count += 1
+      end
+      diag_arr << line
+    end
+    diag_arr
   end
 
   def match_four?(arr)
