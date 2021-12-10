@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 
-require './lib/display'
+require_relative 'display'
 
 # Runs a game of Connect Four.
 class ConnectFour
   include Display
+
+  attr_accessor :board, :player1, :player2, :current_turn
 
   def initialize(board = init_board, player1 = 'Player 1', player2 = 'Player 2')
     @board = board
