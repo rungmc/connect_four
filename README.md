@@ -10,7 +10,7 @@ Live project [here]().
 
 This project was intended primarily as an introduction to *Test-Driven Development* and `rspec`.  The game itself is simple and was done in a relatively straightforward fashion.  Iterating through the board grid to find diagonals was the only major sticking point I came across with the game logic itself.  Pattern matching in Ruby 3.0 continues to be pretty damn handy in these small projects.
 
-As for TDD, I found writing tests for everything before coding to be rather tedious and disruptive to flow compared to just getting straight into things and doing quick unit tests on an as-needed basis.  I'm inclined to chalk this up mostly to being new to `rspec`.  I can, of course, see the advantages to the method if this were a larger project where refactoring was more of a necessity.
+As for TDD, I found writing tests for everything before coding to be rather tedious and disruptive to flow compared to just getting straight into things and doing quick unit tests on an as-needed basis.  I'm inclined to chalk this up mostly to being new to `rspec` and needing to get better at writing easily testable code to take adv of it.  I can, of course, see the advantages to TDD if this were a larger project where refactoring was more of a necessity.
 
 ## A Note on AI Solving
 
