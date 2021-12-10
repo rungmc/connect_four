@@ -4,7 +4,7 @@
 
 A CLI version of Connect Four, a game where the objective is to outmaneuver your opponent to get four tokens in a row on a 7x6 grid.
 
-Live project [here]().
+![Screenshot](screenshot.png)
 
 ## Process
 
